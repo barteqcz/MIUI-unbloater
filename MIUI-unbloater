@@ -138,3 +138,31 @@ case $REPLY in
     *) echo "Invalid input";;
 esac
 done
+
+while read -rp "Do you wanna uninstall Mi Compass? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Mi Compass..."
+        adb shell pm uninstall -k --user 0 com.miui.compass
+        break
+        ;;
+    "y") echo "Uninstalling Mi Compass..."
+        adb shell pm uninstall -k --user 0 com.miui.compass
+        break
+        ;;
+
+    "Y") echo "Uninstalling Mi Compass..."
+        adb shell pm uninstall -k --user 0 com.miui.compass
+        break
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
