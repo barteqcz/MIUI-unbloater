@@ -18,4 +18,4 @@ Just download the file from releases page, run `chmod +x MIUI-unbloater` and `./
 
 ### Troubleshooting
 
-In case you're getting some errors, check whether the user you're using to run this script is inside a Linux `plugdev` group. 
+In case you're getting some errors, check whether the user you're using to run this script is inside a Linux `plugdev` group. In case it isn't, you can add your user to this group by running `sudo usermod -aG plugdev username`.
