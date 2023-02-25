@@ -82,32 +82,3 @@ case $REPLY in
     *) echo "Invalid input";;
 esac
 done
-
-while read -rp "Do you wanna uninstall Google One? [Y/n] " && [[ $REPLY != "q" ]]; do
-case $REPLY in
-    "") echo "Uninstalling Google One..."
-        adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red
-        break
-        ;;
-    "y") echo "Uninstalling Google One..."
-        adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red       
-        break       
-        ;;
-
-    "Y") echo "Uninstalling Google One..."
-        adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red  
-        break       
-        ;;
-
-    "n") echo "Skipping..."
-        break
-        ;;
-
-    "N") echo "Skipping..."
-        break
-        ;;
-
-    *) echo "Invalid input";;
-esac
-done
-
