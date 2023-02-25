@@ -1,0 +1,113 @@
+#!/bin/bash
+while read -rp "Do you wanna uninstall Xiaomi ShareMe? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Xiaomi ShareMe..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.midrop
+        break
+        ;;
+    "y") echo "Uninstalling Xiaomi ShareMe..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.midrop        
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Xiaomi ShareMe..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.midrop        
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
+while read -rp "Do you wanna uninstall Mi Video? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Mi Video..."
+        adb shell pm uninstall -k --user 0 com.miui.videoplayer
+        break
+        ;;
+    "y") echo "Uninstalling Mi Video..."
+        adb shell pm uninstall -k --user 0 com.miui.videoplayer        
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Mi Video..."
+        adb shell pm uninstall -k --user 0 com.miui.videoplayer   
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
+while read -rp "Do you wanna uninstall Mi Music? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Mi Music..."
+        adb shell pm uninstall -k --user 0 com.miui.player
+        break
+        ;;
+    "y") echo "Uninstalling Mi Music..."
+        adb shell pm uninstall -k --user 0 com.miui.player        
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Mi Music..."
+        adb shell pm uninstall -k --user 0 com.miui.player   
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
+while read -rp "Do you wanna uninstall Google One? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Google One..."
+        adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red
+        break
+        ;;
+    "y") echo "Uninstalling Google One..."
+        adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red       
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Google One..."
+        adb shell pm uninstall -k --user 0 com.google.android.apps.subscriptions.red  
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
