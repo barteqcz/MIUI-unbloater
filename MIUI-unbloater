@@ -1,31 +1,4 @@
 #!/bin/bash
-while read -rp "Do you wanna uninstall Xiaomi ShareMe? [Y/n] " && [[ $REPLY != "q" ]]; do
-case $REPLY in
-    "") echo "Uninstalling Xiaomi ShareMe..."
-        adb shell pm uninstall -k --user 0 com.xiaomi.midrop
-        break
-        ;;
-    "y") echo "Uninstalling Xiaomi ShareMe..."
-        adb shell pm uninstall -k --user 0 com.xiaomi.midrop        
-        break       
-        ;;
-
-    "Y") echo "Uninstalling Xiaomi ShareMe..."
-        adb shell pm uninstall -k --user 0 com.xiaomi.midrop        
-        break       
-        ;;
-
-    "n") echo "Skipping..."
-        break
-        ;;
-
-    "N") echo "Skipping..."
-        break
-        ;;
-
-    *) echo "Invalid input";;
-esac
-done
 
 while read -rp "Do you wanna uninstall Mi Video? [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
@@ -153,6 +126,62 @@ case $REPLY in
     "Y") echo "Uninstalling Mi Compass..."
         adb shell pm uninstall -k --user 0 com.miui.compass
         break
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
+while read -rp "Do you wanna uninstall Xiaomi Game Center? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Xiaomi Game Center..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.glgm
+        break
+        ;;
+    "y") echo "Uninstalling Xiaomi Game Center..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.glgm
+        break
+        ;;
+
+    "Y") echo "Uninstalling Xiaomi Game Center..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.glgm
+        break
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
+while read -rp "Do you wanna uninstall Xiaomi ShareMe? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Xiaomi ShareMe..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.midrop
+        break
+        ;;
+    "y") echo "Uninstalling Xiaomi ShareMe..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.midrop        
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Xiaomi ShareMe..."
+        adb shell pm uninstall -k --user 0 com.xiaomi.midrop        
+        break       
         ;;
 
     "n") echo "Skipping..."
