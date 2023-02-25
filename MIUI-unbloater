@@ -82,3 +82,31 @@ case $REPLY in
     *) echo "Invalid input";;
 esac
 done
+
+while read -rp "Do you wanna uninstall Mi File Manager? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Mi File Manager..."
+        adb shell pm uninstall -k --user 0 com.mi.android.globalFileexplorer
+        break
+        ;;
+    "y") echo "Uninstalling Mi File Manager..."
+        adb shell pm uninstall -k --user 0 com.mi.android.globalFileexplorer      
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Mi File Manager..."
+        adb shell pm uninstall -k --user 0 com.mi.android.globalFileexplorer 
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
