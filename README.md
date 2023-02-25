@@ -12,4 +12,4 @@ On Windows, you'll have to manually download `adb` software and usb android driv
 
 ### Running
 
-Just download the file from releases page, run `chmod +x MIUI-unbloater` and `./MIUI-unbloater` on your Linux distro, or via WSL.
+Just download the file from releases page, run `chmod +x MIUI-unbloater` and `./MIUI-unbloater` on your Linux distro, or via WSL (?).
