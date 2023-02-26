@@ -1,8 +1,15 @@
 #!/bin/bash
 
-echo "In case you're connecting your phone to this PC via adb for the first time, keep your Android device screen on, and click ok to authorize the access. If nothing appears on the screen device is already authorized."
-sleep 3
-adb devices
+adb devices > status.config
+
+status=$(sed -i '1d' status.config && awk '{print $2}' status.config)
+
+while [[ $status != "device" ]]; do
+
+echo "Click ok on your Android device to authorize access via adb"
+adb devices > status.config
+
+while [[ $status = "device" ]]; do
 
 while read -rp "Do you wanna uninstall Mi Video? [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
@@ -282,4 +289,5 @@ case $REPLY in
 
     *) echo "Invalid input";;
 esac
+done
 done
