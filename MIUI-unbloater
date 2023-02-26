@@ -170,6 +170,34 @@ case $REPLY in
 esac
 done
 
+while read -rp "Do you wanna uninstall Mi Screen recorder? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Mi Screen recorder..."
+        adb shell pm uninstall -k --user 0 com.miui.screenrecorder
+        break
+        ;;
+    "y") echo "Uninstalling Mi Screen recorder..."
+        adb shell pm uninstall -k --user 0 com.miui.screenrecorder       
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Mi Screen recorder..."
+        adb shell pm uninstall -k --user 0 com.miui.screenrecorder  
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
 while read -rp "Do you wanna uninstall Xiaomi Game Center? [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
     "") echo "Uninstalling Xiaomi Game Center..."
