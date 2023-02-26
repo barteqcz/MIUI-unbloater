@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "In case you're connecting your phone to this PC via adb for the first time, keep your Android device screen on, and click ok to authorize the access. If nothing appears on the screen, and your device has 'device' status, it's alraedy authorized."
+echo "In case you're connecting your phone to this PC via adb for the first time, keep your Android device screen on, and click ok to authorize the access. If nothing appears on the screen device is already authorized."
 sleep 5
 adb devices
 
