@@ -1,17 +1,23 @@
 #!/bin/bash
 
-adb devices > status.config
+adb devices > .adbstatus
 
-status=$(sed -i '1d' status.config && awk '{print $2}' status.config)
+status=$(sed -i '1d' .adbstatus && awk '{print $2}' .adbstatus)
 
-while [[ $status != "device" ]]; do
+if [[ $status = "" ]]; then
+adb devices
+echo "Connect your Android device to the computer. Then restart this script."
+rm .adbstatus
+fi
 
-echo "Click ok on your Android device to authorize access via adb"
-adb devices > status.config
-done
+if [[ $status = "unauthorized" ]]; then
+adb devices
+echo "Reconnect your Android device to the computer and click ok on it, to authorize access via ADB. Then restart this script."
+rm .adbstatus
+fi
 
-while [[ $status = "device" ]]; do
-
+if [[ $status = "device" ]]; then
+rm .adbstatus
 while read -rp "Do you wanna uninstall Mi Video? [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
     "") echo "Uninstalling Mi Video..."
@@ -291,4 +297,4 @@ case $REPLY in
     *) echo "Invalid input";;
 esac
 done
-done
+fi
