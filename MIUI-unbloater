@@ -1,5 +1,7 @@
 #!/bin/bash
 
+adb devices
+
 while read -rp "Do you wanna uninstall Mi Video? [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
     "") echo "Uninstalling Mi Video..."
