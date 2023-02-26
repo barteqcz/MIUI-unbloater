@@ -46,6 +46,34 @@ case $REPLY in
 esac
 done
 
+while read -rp "Do you wanna uninstall Mi Music? [Y/n] " && [[ $REPLY != "q" ]]; do
+case $REPLY in
+    "") echo "Uninstalling Mi Music..."
+        adb shell pm uninstall -k --user 0 com.miui.player
+        break
+        ;;
+    "y") echo "Uninstalling Mi Music..."
+        adb shell pm uninstall -k --user 0 com.miui.player       
+        break       
+        ;;
+
+    "Y") echo "Uninstalling Mi Music..."
+        adb shell pm uninstall -k --user 0 com.miui.player 
+        break       
+        ;;
+
+    "n") echo "Skipping..."
+        break
+        ;;
+
+    "N") echo "Skipping..."
+        break
+        ;;
+
+    *) echo "Invalid input";;
+esac
+done
+
 while read -rp "Do you wanna uninstall MIUI daily wallpaper [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
     "") echo "Uninstalling MIUI daily wallpaper..."
@@ -74,19 +102,19 @@ case $REPLY in
 esac
 done
 
-while read -rp "Do you wanna uninstall Mi Music? [Y/n] " && [[ $REPLY != "q" ]]; do
+while read -rp "Do you wanna uninstall MIUI Cleaner [Y/n] " && [[ $REPLY != "q" ]]; do
 case $REPLY in
-    "") echo "Uninstalling Mi Music..."
-        adb shell pm uninstall -k --user 0 com.miui.player
+    "") echo "Uninstalling MIUI cleaner..."
+        adb shell pm uninstall -k --user 0 com.miui.cleaner
         break
         ;;
-    "y") echo "Uninstalling Mi Music..."
-        adb shell pm uninstall -k --user 0 com.miui.player       
+    "y") echo "Uninstalling MIUI cleaner..."
+        adb shell pm uninstall -k --user 0 com.miui.cleaner
         break       
         ;;
 
-    "Y") echo "Uninstalling Mi Music..."
-        adb shell pm uninstall -k --user 0 com.miui.player 
+    "Y") echo "Uninstalling MIUI cleaner..."
+        adb shell pm uninstall -k --user 0 com.miui.cleaner
         break       
         ;;
 
