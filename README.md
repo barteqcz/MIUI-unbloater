@@ -12,6 +12,10 @@ On Arch-based distros, you can install `adb` using `sudo pacman -S android-tools
 <br>
 On Windows, you'll have to manually download `adb` software and usb android drivers.
 
+#### Enabling usb debugging in MIUI
+
+To enable USB debugging in MIUI, firstly you have to enable developer options. To do that, go to settings > about phone and click 7 times on "MIUI version". Then, go back to the settings main page, and go to advanced settings. Scroll down, and you should see developer options. Open developer options, and scroll down to "USB debugging" option. Enable it.
+
 ### Running
 
 Just download the file from releases page, run `chmod +x MIUI-unbloater` and `./MIUI-unbloater` on your Linux distro, or via WSL (?).
