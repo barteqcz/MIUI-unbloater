@@ -8,6 +8,7 @@ while [[ $status != "device" ]]; do
 
 echo "Click ok on your Android device to authorize access via adb"
 adb devices > status.config
+done
 
 while [[ $status = "device" ]]; do
 
