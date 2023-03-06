@@ -1,5 +1,11 @@
 # MIUI-unbloater
 
+### Coming soon
+
+Rewrite to Python is coming soon. There will be dedicated .exe for Windows and executable file for Linux.
+
+### About
+
 This is a simple script, written in Bash, which is supposed to safely remove bloatware from Xiaomi MIUI ROM using `adb`.
 
 ### Preparing to run
