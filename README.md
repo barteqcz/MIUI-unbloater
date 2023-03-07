@@ -2,7 +2,7 @@
 
 ### About
 
-This is a simple script, written in Bash, which is supposed to safely remove bloatware from Xiaomi MIUI ROM using `adb`.
+This is a simple script, written in Python, which is supposed to safely remove bloatware from Xiaomi MIUI ROM using `adb`.
 
 ### Preparing to run
 
@@ -30,4 +30,4 @@ Just download the .exe file from the releases page, and run it.
 
 ### Troubleshooting
 
-In case you're getting some errors, check whether the user you're using to run this script is inside a Linux `plugdev` group. In case it isn't, you can add your user to this group by running `sudo usermod -aG plugdev username`.
+In case you're getting some errors on Linux, check whether the package 'abd' is installed, and whether the user you're using to run this script is inside a Linux `plugdev` group. In case it isn't, you can add your user to this group by running `sudo usermod -aG plugdev username`.
