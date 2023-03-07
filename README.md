@@ -1,9 +1,5 @@
 # MIUI-unbloater
 
-### Coming soon
-
-Rewrite to Python is coming soon. There will be dedicated .exe for Windows and executable file for Linux.
-
 ### About
 
 This is a simple script, written in Bash, which is supposed to safely remove bloatware from Xiaomi MIUI ROM using `adb`.
@@ -24,7 +20,13 @@ To enable USB debugging in MIUI, firstly you have to enable developer options. T
 
 ### Running
 
-Just download the file from releases page, run `chmod +x MIUI-unbloater` and `./MIUI-unbloater` on your Linux distro, or via WSL (?).
+#### Linux
+
+Just download the file from the releases page, run `./MIUI-unbloater` on your Linux distro.
+
+#### Windows
+
+Just download the .exe file from the releases page, and run it.
 
 ### Troubleshooting
 
