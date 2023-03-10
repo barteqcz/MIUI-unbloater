@@ -23,6 +23,7 @@ To enable USB debugging in MIUI, firstly you have to enable developer options. T
 #### Linux
 
 Just download the file from the releases page, run `./MIUI-unbloater` on your Linux distro.
+<br>
 WARNING! Don't run the file by doubleclicking it, since it won't start in CLI mode, and you won't be able to do anything, but the program will run in the background.
 
 #### Windows
